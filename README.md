@@ -56,7 +56,9 @@ Open _Terminal/Shell_ inside your _VSCode_ and run
     npm run lint:es
   ```
 
-### Deployment
+## ScreenShot of the project
+
+<img width="1789" alt="Screen Shot 2022-06-08 at 11 27 49 AM" src="https://user-images.githubusercontent.com/91022355/172547149-e36e11ef-5f94-4ce1-b494-995f24711222.png">
 
 
 ## Authors
