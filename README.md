@@ -28,19 +28,21 @@ To get a copy of this project running on your local computer, do the followings:
 ### Install
 
 Open _Terminal/Shell_ inside your _VSCode_ and run
+
   ```
     npm install --force
+    
   ```
-    ```
+   ```
     npm run dev
   ```
 
 ### Run tests
 
 - For running project
-  ```
-    npm run dev
-  ```
+
+ `npm run dev`
+
 - For _hint_ tests, run
   ```
     npm run lint:hint
