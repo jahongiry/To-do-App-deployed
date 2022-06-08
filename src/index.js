@@ -1,8 +1,9 @@
+/* eslint no-loop-func: "error" */
 import './styles/main.css';
 import generate from './modules/generate_function.js';
 import { focusing, bluring, trashBining } from './modules/focus_blur.js';
-import {checkmarking, checkmarking2} from './modules/check_mark.js';
-import {addFunction} from './modules/add.js';
+import { checkmarking, checkmarking2 } from './modules/check_mark.js';
+import { addFunction } from './modules/add.js';
 
 const input = document.querySelector('.add-input');
 const submitTask = document.querySelector('.submit-task');
@@ -41,13 +42,13 @@ submitTask.addEventListener('click', () => {
   const checked = document.querySelectorAll('.checked');
 
   for (let i = 0; i < checkMark.length; i += 1) {
-    checkMark[i].addEventListener('click', () => {
+    checkMark[i].addEventListener('click', () => {// eslint-disable-line
       checkmarking(i, checkMark, checked, taskName, toDoArray);
     });
   }
 
   for (let i = 0; i < checked.length; i += 1) {
-    checked[i].addEventListener('click', () => {
+    checked[i].addEventListener('click', () => {// eslint-disable-line
       checkmarking2(i, checkMark, checked, taskName, toDoArray);
     });
   }
@@ -66,13 +67,13 @@ const checked = document.querySelectorAll('.checked');
 const clearingAll = document.querySelector('.clear-all');
 
 for (let i = 0; i < checkMark.length; i += 1) {
-  checkMark[i].addEventListener('click', () => {
-    checkmarking(i, checkMark, checked, taskName, toDoArray);;
+  checkMark[i].addEventListener('click', () => {// eslint-disable-line
+    checkmarking(i, checkMark, checked, taskName, toDoArray);
   });
 }
 
 for (let i = 0; i < checked.length; i += 1) {
-  checked[i].addEventListener('click', () => {
+  checked[i].addEventListener('click', () => {// eslint-disable-line
     checkmarking2(i, checkMark, checked, taskName, toDoArray);
   });
 }
