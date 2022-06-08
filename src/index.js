@@ -2,6 +2,7 @@ import './styles/main.css';
 import generate from './modules/generate_function.js';
 import { focusing, bluring, trashBining } from './modules/focus_blur.js';
 import {checkmarking, checkmarking2} from './modules/check_mark.js';
+import {addFunction} from './modules/add.js';
 
 const input = document.querySelector('.add-input');
 const submitTask = document.querySelector('.submit-task');
@@ -22,7 +23,7 @@ submitTask.addEventListener('click', () => {
     completed: false,
     index: toDoArray.length,
   };
-  toDoArray.push(objTemplate);
+  addFunction(toDoArray, objTemplate);
   localStorage.setItem('tasks', JSON.stringify(toDoArray));
   const todoLines = toDoArray.map((product) => generate(product)).join('');
   tasksContainer.innerHTML = todoLines;
