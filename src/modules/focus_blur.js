@@ -1,3 +1,5 @@
+import { deleting } from './delete.js';
+
 export const focusing = (taskName, toDoItem, trashBin, dots) => {
   for (let i = 0; i < toDoItem.length; i += 1) {
     taskName[i].addEventListener('focus', () => {
@@ -24,7 +26,7 @@ export const bluring = (taskName, toDoItem, trashBin, dots) => {
 export const trashBining = (taskName, toDoItem, trashBin, dots, toDoArray) => {
   for (let i = 0; i < trashBin.length; i += 1) {
     trashBin[i].addEventListener('click', () => {
-      toDoArray.splice(i, 1);
+      deleting(i, toDoArray);
       for (let n = 0; n < toDoArray.length; n += 1) {
         toDoArray[n].index = n;
       }
